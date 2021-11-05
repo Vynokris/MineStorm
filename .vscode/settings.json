@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "mine.h": "c",
+        "ui.h": "c",
+        "game.h": "c",
+        "type_traits": "c",
+        "math.h": "c",
+        "limits": "cpp",
+        "define.h": "c",
+        "player.h": "c"
+    }
+}
