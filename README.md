@@ -38,7 +38,7 @@ Upon valgrind inspection, the project leaks and has a few errors. These are all 
 ## **Sound design**
 
 The original soundtrack was composed by Alexandre PERCHÉ. <br>
-<iframe width="350px" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1148721193&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/user-131837480-851531639" title="vegasword" target="_blank" style="color: #cccccc; text-decoration: none;">vegasword</a> · <a href="https://soundcloud.com/user-131837480-851531639/minestorm-mind" title="MineStorm Mind" target="_blank" style="color: #cccccc; text-decoration: none;">MineStorm Mind</a></div> <br>
+[vegasword](https://soundcloud.com/user-131837480-851531639) · [MineStorm Mind](https://soundcloud.com/user-131837480-851531639/minestorm-mind) <br>
 
 All sound effects come from the [Freesound](https://freesound.org/) website, and are licensed under the Creative Commons Attribution license. Sound effects were also remixed by Alexandre PERCHÉ. <br>
 
