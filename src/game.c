@@ -52,7 +52,7 @@ void audio_update(Game *game)
         }
 
         // Bullet sound.
-        if (IsKeyPressed(KEY_F) || IsKeyPressed(KEY_K) || 
+        if (IsKeyPressed(KEY_SPACE) || IsKeyPressed(KEY_KP_0) || 
             IsGamepadButtonPressed(0, 12) || (!game->solo && IsGamepadButtonPressed(1, 12)))
         {
             PlaySoundMulti(game->sfx[2]);
@@ -539,10 +539,9 @@ void game_update(Game *game)
         collision_update(game);
 
         // Pause menu bind.
-        if (IsKeyPressed(KEY_SPACE) ||
+        if (IsKeyPressed(KEY_ESCAPE) ||
             IsGamepadButtonPressed(0, 15) || IsGamepadButtonPressed(1, 15))
         {
-            SetExitKey(KEY_DELETE);
             game->scene_id = SC_PAUSE;
         }
 
@@ -588,7 +587,13 @@ void main_update(Game *game)
         }
         break;
 
+    case SC_LOADING:
+        // Change exit key to delete
+        SetExitKey(KEY_DELETE);
+        break;
+
     case SC_IN_GAME:
+
         // Update the game.
         game_update(game);
         
@@ -596,26 +601,21 @@ void main_update(Game *game)
 
     case SC_PAUSE:
         // Unpause.
-        if (IsKeyPressed(KEY_SPACE) || 
+        if (IsKeyPressed(KEY_ESCAPE) || 
             IsGamepadButtonPressed(0, 6) || IsGamepadButtonPressed(1, 6))
         {
-            SetExitKey(KEY_ESCAPE);
             game->scene_id = SC_IN_GAME;
         }
         // Go back to main menu.
-        if (IsKeyPressed(KEY_ESCAPE) || 
+        if (IsKeyPressed(KEY_BACKSPACE) || 
             IsGamepadButtonPressed(0, 15) || IsGamepadButtonPressed(1, 15))
         {
-            SetExitKey(KEY_ESCAPE);
             game->scene_id = SC_MAIN_MENU;
         }
         
         break;
 
     case SC_GAME_OVER:
-        // Go back to the main menu.
-        SetExitKey(KEY_DELETE);
-
         if (IsKeyPressed(KEY_ESCAPE) ||
             IsGamepadButtonPressed(0, 6) || IsGamepadButtonPressed(1, 6))
         {
