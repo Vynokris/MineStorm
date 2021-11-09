@@ -68,7 +68,7 @@ void player_update(Player *player, int player_id)
     if (player->hp > 0 && !player->destroyed && !player->is_teleporting)
     {
         // -- Accelerate -- //
-        if (IsKeyDown((player_id == 0 ? KEY_R : KEY_I)) || 
+        if (IsKeyDown((player_id == 0 ? KEY_W : KEY_KP_8)) || 
            (IsGamepadAvailable(player_id == 0 ? 0 : 1) && IsGamepadButtonDown(player_id == 0 ? 0 : 1, 7)))
         {
             // If the player is under the maximum velocity, make him accelerate.
@@ -103,12 +103,12 @@ void player_update(Player *player, int player_id)
         }
 
         // -- Turn -- //
-        if (IsKeyDown((player_id == 0 ? KEY_D : KEY_J)) || 
+        if (IsKeyDown((player_id == 0 ? KEY_A : KEY_KP_4)) || 
            (IsGamepadAvailable(player_id) && IsGamepadButtonDown(player_id, 4)))
         {
             player->rotation -= PI / 48;
         }
-        if (IsKeyDown((player_id == 0 ? KEY_G : KEY_L)) || 
+        if (IsKeyDown((player_id == 0 ? KEY_D : KEY_KP_6)) || 
            (IsGamepadAvailable(player_id) && IsGamepadButtonDown(player_id, 2)))
         {
             player->rotation += PI / 48;
@@ -123,15 +123,15 @@ void player_update(Player *player, int player_id)
         }
 
         // -- Shoot -- //
-        if (IsKeyPressed((player_id == 0 ? KEY_F : KEY_K)) || 
+        if (IsKeyPressed((player_id == 0 ? KEY_SPACE : KEY_KP_0)) || 
             (IsGamepadAvailable(player_id) && IsGamepadButtonPressed(player_id, 12)))
         {
             player_shoot(player);
         }
 
         // -- Teleport -- //
-        if (IsKeyPressed((player_id == 0 ? KEY_E : KEY_U)) ||
-            IsKeyPressed((player_id == 0 ? KEY_T : KEY_O)) ||
+        if (IsKeyPressed((player_id == 0 ? KEY_Q : KEY_KP_7)) ||
+            IsKeyPressed((player_id == 0 ? KEY_E : KEY_KP_9)) ||
             (IsGamepadAvailable(player_id) && (IsGamepadButtonPressed(player_id, 8) || 
                                                IsGamepadButtonPressed(player_id, 10))))
         {
