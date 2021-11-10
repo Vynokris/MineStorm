@@ -17,15 +17,15 @@ void draw_main_menu(Game game)
                50, 0, Fade(RAYWHITE, 1.0f));
 
     // Draw solo mode title.
-    DrawTextEx(game.ui.font, IsGamepadAvailable(0) ? "[F/START] 1P GAME" : "[F] 1P GAME",
-               toRayVec(Vector2Create(GetScreenWidth() / 2      - MeasureTextEx(game.ui.font, IsGamepadAvailable(0) ? "[F/START] 1P GAME" : "[F] 1P GAME", 25, 0).x / 2,
-                                      GetScreenHeight() * 2 / 5 - MeasureTextEx(game.ui.font, IsGamepadAvailable(0) ? "[F/START] 1P GAME" : "[F] 1P GAME", 25, 0).y / 2)),
+    DrawTextEx(game.ui.font, IsGamepadAvailable(0) ? "[G/START] 1P GAME" : "[G] 1P GAME",
+               toRayVec(Vector2Create(GetScreenWidth() / 2      - MeasureTextEx(game.ui.font, IsGamepadAvailable(0) ? "[G/START] 1P GAME" : "[J] 1P GAME", 25, 0).x / 2,
+                                      GetScreenHeight() * 2 / 5 - MeasureTextEx(game.ui.font, IsGamepadAvailable(0) ? "[G/START] 1P GAME" : "[J] 1P GAME", 25, 0).y / 2)),
                25, 0, Fade(RAYWHITE, 1.0f));
 
     // Draw multiplayer mode title.
-    DrawTextEx(game.ui.font, IsGamepadAvailable(0) ? "[K/SELECT] 2P GAME" : "[K] 2P GAME",
-               toRayVec(Vector2Create(GetScreenWidth() / 2      - MeasureTextEx(game.ui.font, IsGamepadAvailable(0) ? "[K/SELECT] 2P GAME" : "[K] 2P GAME", 25, 0).x / 2,
-                                      GetScreenHeight() * 2 / 5 + MeasureTextEx(game.ui.font, IsGamepadAvailable(0) ? "[K/SELECT] 2P GAME" : "[K] 2P GAME", 25, 0).y / 2 + 25)),
+    DrawTextEx(game.ui.font, IsGamepadAvailable(0) ? "[J/SELECT] 2P GAME" : "[J] 2P GAME",
+               toRayVec(Vector2Create(GetScreenWidth() / 2      - MeasureTextEx(game.ui.font, IsGamepadAvailable(0) ? "[G/SELECT] 2P GAME" : "[J] 2P GAME", 25, 0).x / 2,
+                                      GetScreenHeight() * 2 / 5 + MeasureTextEx(game.ui.font, IsGamepadAvailable(0) ? "[G/SELECT] 2P GAME" : "[J] 2P GAME", 25, 0).y / 2 + 25)),
                25, 0, Fade(RAYWHITE, 1.0f));
 
     // Draw highscore title.
@@ -48,7 +48,7 @@ void draw_main_menu(Game game)
 
     // Keybinds draw
     if (IsGamepadAvailable(0)) DrawTextureEx(game.ui.sprites[10], toRayVec(Vector2Create(65, 85)), 0, 0.70, RAYWHITE);
-    else                       DrawTexture(game.ui.sprites[8], 65, 50, RAYWHITE);
+    else                       DrawTexture(game.ui.sprites[8], 65, 75, RAYWHITE);
 
     if (IsGamepadAvailable(1)) DrawTextureEx(game.ui.sprites[10], toRayVec(Vector2Create(GetScreenWidth() - 65 - game.ui.sprites[9].width, 85)), 0, 0.70, RAYWHITE);
     else                       DrawTexture(game.ui.sprites[9], GetScreenWidth() - 65 - game.ui.sprites[9].width, 50, RAYWHITE);
@@ -263,14 +263,14 @@ void draw_pause(Game game)
                toRayVec(Vector2Create(GetScreenWidth()  / 2     - MeasureTextEx(game.ui.font, "PAUSE", 50, 0).x / 2,
                                       GetScreenHeight() * 1 / 5 - MeasureTextEx(game.ui.font, "PAUSE", 50, 0).y / 2)),
                50, 0, Fade(RAYWHITE, 1.0f));
-    DrawTextEx(game.ui.font, IsGamepadAvailable(0) ? "Press [GAMEPAD B] to continue or [START] to quit" : "Press [BACKSPACE] to continue or [ESC] to quit",
-               toRayVec(Vector2Create(GetScreenWidth() / 2      - MeasureTextEx(game.ui.font, IsGamepadAvailable(0) ? "Press [GAMEPAD B] to continue or [START] to quit" : "Press [BACKSPACE] to continue or [ESC] to quit", 16, 0).x / 2,
-                                      GetScreenHeight() * 3 / 4 - MeasureTextEx(game.ui.font, IsGamepadAvailable(0) ? "Press [GAMEPAD B] to continue or [START] to quit" : "Press [BACKSPACE] to continue or [ESC] to quit", 16, 0).y / 2)),
+    DrawTextEx(game.ui.font, IsGamepadAvailable(0) ? "Press [GAMEPAD B] to continue or [START] to quit" : "Press [G] to continue or [ESC] to quit",
+               toRayVec(Vector2Create(GetScreenWidth() / 2      - MeasureTextEx(game.ui.font, IsGamepadAvailable(0) ? "Press [GAMEPAD B] to continue or [START] to quit" : "Press [G] to continue or [ESC] to quit", 16, 0).x / 2,
+                                      GetScreenHeight() * 3 / 4 - MeasureTextEx(game.ui.font, IsGamepadAvailable(0) ? "Press [GAMEPAD B] to continue or [START] to quit" : "Press [G] to continue or [ESC] to quit", 16, 0).y / 2)),
                16, 0, Fade(RAYWHITE, 1.0f));
 
     // Keybinds draw
     if (IsGamepadAvailable(0)) DrawTextureEx(game.ui.sprites[10], toRayVec(Vector2Create(65, 85)), 0, 0.70, RAYWHITE);
-    else                       DrawTexture(game.ui.sprites[8], 65, 50, RAYWHITE);
+    else                       DrawTexture(game.ui.sprites[8], 65, 75, RAYWHITE);
 
     if (IsGamepadAvailable(1)) DrawTextureEx(game.ui.sprites[10], toRayVec(Vector2Create(GetScreenWidth() - 65 - game.ui.sprites[9].width, 85)), 0, 0.70, RAYWHITE);
     else                       DrawTexture(game.ui.sprites[9], GetScreenWidth() - 65 - game.ui.sprites[9].width, 50, RAYWHITE);
@@ -281,7 +281,7 @@ void draw_game_over(Game game)
     DrawTextEx(game.ui.font, "GAME OVER",
                toRayVec(Vector2Create(GetScreenWidth() / 2      - MeasureTextEx(game.ui.font, "GAME OVER", 50, 0).x / 2,
                                       GetScreenHeight() * 1 / 5 - MeasureTextEx(game.ui.font, "GAME OVER", 50, 0).y / 2)),
-               50, 0, Fade(RED, 1.0f));
+               50, 0, Fade((Color){ 212, 17, 17, 255 }, 1.0f));
 
     // Solo and multiplayer game over messages.
     if (game.solo)
@@ -313,10 +313,10 @@ void draw_game_over(Game game)
                    25, 0, Fade(RAYWHITE, 1.0f));
     }
 
-    DrawTextEx(game.ui.font, IsGamepadAvailable(0) ? "Press [GAMEPAD B] to go back to main menu" : "Press [Esc] to go back to main menu",
-               toRayVec(Vector2Create(GetScreenWidth() / 2      - MeasureTextEx(game.ui.font, IsGamepadAvailable(0) ? "Press [GAMEPAD B] to go back to main menu" : "Press [Esc] to go back to main menu", 16, 0).x / 2,
-                                      GetScreenHeight() * 4 / 5 - MeasureTextEx(game.ui.font, IsGamepadAvailable(0) ? "Press [GAMEPAD B] to go back to main menu" : "Press [Esc] to go back to main menu", 16, 0).y / 2)),
-               16, 0, Fade(RED, 1.0f));
+    DrawTextEx(game.ui.font, IsGamepadAvailable(0) ? "Press [GAMEPAD B] to go back to main menu" : "Press [Esc] or [G] to go back to main menu",
+               toRayVec(Vector2Create(GetScreenWidth() / 2      - MeasureTextEx(game.ui.font, IsGamepadAvailable(0) ? "Press [GAMEPAD B] to go back to main menu" : "Press [Esc] or [G] to go back to main menu", 16, 0).x / 2,
+                                      GetScreenHeight() * 4 / 5 - MeasureTextEx(game.ui.font, IsGamepadAvailable(0) ? "Press [GAMEPAD B] to go back to main menu" : "Press [Esc] or [G] to go back to main menu", 16, 0).y / 2)),
+               16, 0, Fade((Color){ 212, 17, 17, 255 }, 1.0f));
 }
 
 void draw_ui(Game game)

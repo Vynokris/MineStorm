@@ -1,19 +1,16 @@
 // This shader is from raylib's github. It is not our creation, since we only edited it to fit our needs.
 
-#version 330
+#version 100
+
+precision mediump float;
 
 // Input vertex attributes (from vertex shader).
-in vec2 fragTexCoord;
-in vec4 fragColor;
+varying vec2 fragTexCoord;
+varying vec4 fragColor;
 
 // Input uniform values.
 uniform sampler2D texture0;
 uniform vec4 colDiffuse;
-// uniform float uTime;
-// uniform float screenHeight;
-
-// Output fragment color.
-out vec4 finalColor;
 
 // Custom variables.
 float offset = 0.0;
@@ -25,7 +22,7 @@ void main()
     float wavePos = cos((fract(globalPos) - 0.5) * 3.14 / 2.);
 
     // Fetching texel color from texture sampler.
-    vec4 texelColor = texture(texture0, fragTexCoord);
+    vec4 texelColor = texture2D(texture0, fragTexCoord);
 
-    finalColor = mix(vec4(0.3, 0.3, 0.3, 0.), texelColor, wavePos);
+    gl_FragColor = mix(vec4(0.3, 0.3, 0.3, 0.), texelColor, wavePos);
 }

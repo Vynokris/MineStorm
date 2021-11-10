@@ -121,19 +121,17 @@ void player_update(Player *player, int player_id)
             player->rotation = Vector2GetAngle(Vector2Normalize(Vector2Create(GetGamepadAxisMovement(player_id, 2), 
                                                                               GetGamepadAxisMovement(player_id, 3))));
         }
-
+ 
         // -- Shoot -- //
-        if (IsKeyPressed((player_id == 0 ? KEY_SPACE : KEY_KP_0)) || 
+        if (IsKeyPressed((player_id == 0 ? KEY_G : KEY_KP_0)) || 
             (IsGamepadAvailable(player_id) && IsGamepadButtonPressed(player_id, 12)))
         {
             player_shoot(player);
         }
 
         // -- Teleport -- //
-        if (IsKeyPressed((player_id == 0 ? KEY_Q : KEY_KP_7)) ||
-            IsKeyPressed((player_id == 0 ? KEY_E : KEY_KP_9)) ||
-            (IsGamepadAvailable(player_id) && (IsGamepadButtonPressed(player_id, 8) || 
-                                               IsGamepadButtonPressed(player_id, 10))))
+        if ((player_id == 0 ? IsKeyPressed(KEY_J) : (IsKeyPressed(KEY_KP_7) || IsKeyPressed(KEY_KP_9))) ||
+            (IsGamepadAvailable(player_id) && (IsGamepadButtonPressed(player_id, 8) || IsGamepadButtonPressed(player_id, 10))))
         {
             player_tp(player);
         }

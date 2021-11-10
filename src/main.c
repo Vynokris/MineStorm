@@ -1,4 +1,5 @@
 #include "draw.h"
+#include "stdio.h"
 
 int main(void)
 {
@@ -16,6 +17,12 @@ int main(void)
     InitAudioDevice();
     HideCursor();
     SetTraceLogLevel(LOG_ERROR);
+
+    // Clean the highscore.
+    FILE* f = fopen("./data/highscore.bin", "wb");
+    int temp = 0;
+    fwrite(&temp, sizeof(int), 1, f);
+    fclose(f);
 
     // Initialize the game object.
     Game game;
