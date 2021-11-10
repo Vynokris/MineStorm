@@ -263,9 +263,9 @@ void draw_pause(Game game)
                toRayVec(Vector2Create(GetScreenWidth()  / 2     - MeasureTextEx(game.ui.font, "PAUSE", 50, 0).x / 2,
                                       GetScreenHeight() * 1 / 5 - MeasureTextEx(game.ui.font, "PAUSE", 50, 0).y / 2)),
                50, 0, Fade(RAYWHITE, 1.0f));
-    DrawTextEx(game.ui.font, IsGamepadAvailable(0) ? "Press [GAMEPAD B] to continue or [START] to quit" : "Press [SPACE] to continue or [ESC] to quit",
-               toRayVec(Vector2Create(GetScreenWidth() / 2      - MeasureTextEx(game.ui.font, IsGamepadAvailable(0) ? "Press [GAMEPAD B] to continue or [START] to quit" : "Press [SPACE] to continue or [ESC] to quit", 16, 0).x / 2,
-                                      GetScreenHeight() * 3 / 4 - MeasureTextEx(game.ui.font, IsGamepadAvailable(0) ? "Press [GAMEPAD B] to continue or [START] to quit" : "Press [SPACE] to continue or [ESC] to quit", 16, 0).y / 2)),
+    DrawTextEx(game.ui.font, IsGamepadAvailable(0) ? "Press [GAMEPAD B] to continue or [START] to quit" : "Press [BACKSPACE] to continue or [ESC] to quit",
+               toRayVec(Vector2Create(GetScreenWidth() / 2      - MeasureTextEx(game.ui.font, IsGamepadAvailable(0) ? "Press [GAMEPAD B] to continue or [START] to quit" : "Press [BACKSPACE] to continue or [ESC] to quit", 16, 0).x / 2,
+                                      GetScreenHeight() * 3 / 4 - MeasureTextEx(game.ui.font, IsGamepadAvailable(0) ? "Press [GAMEPAD B] to continue or [START] to quit" : "Press [BACKSPACE] to continue or [ESC] to quit", 16, 0).y / 2)),
                16, 0, Fade(RAYWHITE, 1.0f));
 
     // Keybinds draw
