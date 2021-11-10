@@ -130,10 +130,8 @@ void player_update(Player *player, int player_id)
         }
 
         // -- Teleport -- //
-        if (IsKeyPressed((player_id == 0 ? KEY_J : KEY_KP_7)) ||
-            IsKeyPressed((player_id == 1 && KEY_KP_9))        ||
-            (IsGamepadAvailable(player_id) && (IsGamepadButtonPressed(player_id, 8) || 
-                                               IsGamepadButtonPressed(player_id, 10))))
+        if ((player_id == 0 ? IsKeyPressed(KEY_J) : (IsKeyPressed(KEY_KP_7) || IsKeyPressed(KEY_KP_9))) ||
+            (IsGamepadAvailable(player_id) && (IsGamepadButtonPressed(player_id, 8) || IsGamepadButtonPressed(player_id, 10))))
         {
             player_tp(player);
         }
