@@ -20,7 +20,7 @@ void audio_init(Game *game)
     SetSoundVolume(game->sfx[0], 1);
 
     // Load the music.
-    game->music         = LoadMusicStream("./assets/audio/MineStormMind_looped.wav");
+    game->music         = LoadMusicStream("./assets/audio/MineStormMind.ogg");
     game->music.looping = true;
 }
 
