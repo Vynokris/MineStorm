@@ -573,14 +573,14 @@ void main_update(Game *game)
         SetExitKey(KEY_ESCAPE);
         
         // Start a solo game.
-        if (IsKeyPressed(KEY_F) || 
+        if (IsKeyPressed(KEY_G) || 
             IsGamepadButtonPressed(0, 15) || IsGamepadButtonPressed(1, 15))
         {
             game_start_solo(game);
         }
 
         // Start a 2 player game.
-        if (IsKeyPressed(KEY_K) ||
+        if (IsKeyPressed(KEY_J) ||
             IsGamepadButtonPressed(0, 13) || IsGamepadButtonPressed(1, 13))
         {
             game_start_duo(game);
@@ -593,7 +593,6 @@ void main_update(Game *game)
         break;
 
     case SC_IN_GAME:
-
         // Update the game.
         game_update(game);
         
@@ -601,13 +600,13 @@ void main_update(Game *game)
 
     case SC_PAUSE:
         // Unpause.
-        if (IsKeyPressed(KEY_ESCAPE) || 
+        if (IsKeyPressed(KEY_G) || 
             IsGamepadButtonPressed(0, 6) || IsGamepadButtonPressed(1, 6))
         {
             game->scene_id = SC_IN_GAME;
         }
         // Go back to main menu.
-        if (IsKeyPressed(KEY_BACKSPACE) || 
+        if (IsKeyPressed(KEY_ESCAPE) || 
             IsGamepadButtonPressed(0, 15) || IsGamepadButtonPressed(1, 15))
         {
             game->scene_id = SC_MAIN_MENU;
@@ -616,7 +615,7 @@ void main_update(Game *game)
         break;
 
     case SC_GAME_OVER:
-        if (IsKeyPressed(KEY_ESCAPE) ||
+        if (IsKeyPressed(KEY_ESCAPE) || IsKeyPressed(KEY_G) ||
             IsGamepadButtonPressed(0, 6) || IsGamepadButtonPressed(1, 6))
         {
             game->scene_id = SC_MAIN_MENU;
