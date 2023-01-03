@@ -16,6 +16,17 @@ All keybinding assets come from itch.io free assets packs :
 
 <br>
 
+## Preview
+
+<img src="./data/screenshots/minestorm.gif"/> 
+<img src="./data/screenshots/screenshot0.png" style="width:260px;"/>
+<img src="./data/screenshots/screenshot4.png" style="width:260px;"/>
+<img src="./data/screenshots/screenshot1.png" style="width:260px;"/>
+<img src="./data/screenshots/screenshot2.png" style="width:260px;"/>
+<img src="./data/screenshots/screenshot3.png" style="width:260px;"/>
+
+<br>
+
 ## **Game information**
 
 When starting a game, a spaceship (the minelayer) lays mines on the playing field. <br>
@@ -41,12 +52,3 @@ The original soundtrack was composed by Alexandre PERCHÉ. <br>
 [vegasword](https://soundcloud.com/user-131837480-851531639) · [MineStorm Mind](https://soundcloud.com/user-131837480-851531639/minestorm-mind) <br>
 
 All sound effects come from the [Freesound](https://freesound.org/) website, and are licensed under the Creative Commons Attribution license. Sound effects were also remixed by Alexandre PERCHÉ. <br>
-
-<br>
-
-## **Screenshots**
-
-<img src="./data/screenshots/screenshot0.png" style="width:400px;"/>
-<img src="./data/screenshots/screenshot1.png" style="width:400px;"/>
-<img src="./data/screenshots/screenshot2.png" style="width:400px;"/>
-<img src="./data/screenshots/screenshot3.png" style="width:400px;"/>
