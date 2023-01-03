@@ -7,12 +7,14 @@ This project is a student project done for ISART Digital by Rémi SERRA and Alex
 The goal was to recreate the "MineStorm" game released on Vectrex in 1982. <br>
 This game can be played with a keyboard or a gamepad, by 1 or 2 players.
 
+Try it <a href="https://vynokris.itch.io/modern-minestorm" target="_blank">here</a>!
+
 The game object assets were provided by the school. <br>
 All keybinding assets come from itch.io free assets packs :
 
-- [Gerald's keys](https://gerald-burke.itch.io/geralds-keys)
+- <a href="https://gerald-burke.itch.io/geralds-keys" target="_blank">Gerald's keys</a>
 
-- [Kenney's input prompts](https://kenney-assets.itch.io/input-prompts-pixel-16)
+- <a href="https://kenney-assets.itch.io/input-prompts-pixel-16" target="_blank">Kenney's input prompts</a>
 
 <br>
 
@@ -37,7 +39,7 @@ Finally, when all  the mines have been destroyed and the minelayer is destroyed 
 
 ## **Technical details**
 
-The game runs on the simple and easy-to-use [raylib 4.0](https://www.raylib.com/) library made for game programming. <br>
+The game runs on the simple and easy-to-use <a href="https://www.raylib.com/" target="_blank">raylib 4.0</a> library made for game programming. <br>
 A custom mathematics library was created for this project. It is mainly used to detect collisions between the game objects' hitboxes. <br>
 Game rendering is done on a render texture, to enable post processing effects, such as scanlines and screen shake.
 
@@ -48,6 +50,6 @@ Upon valgrind inspection, the project leaks and has a few errors. These are all 
 ## **Sound design**
 
 The original soundtrack was composed by Alexandre PERCHÉ. <br>
-[vegasword](https://soundcloud.com/user-131837480-851531639) · [MineStorm Mind](https://soundcloud.com/user-131837480-851531639/minestorm-mind) <br>
+<a href="https://soundcloud.com/user-131837480-851531639" target="_blank">vegasword's soundcloud</a> · <a href="https://soundcloud.com/user-131837480-851531639/minestorm-mind" target="_blank">MineStorm Mind</a> <br>
 
-All sound effects come from the [Freesound](https://freesound.org/) website, and are licensed under the Creative Commons Attribution license. Sound effects were also remixed by Alexandre PERCHÉ. <br>
+All sound effects come from the <a href="https://freesound.org/" target="_blank">Freesound</a> website, and are licensed under the Creative Commons Attribution license. Sound effects were also remixed by Alexandre PERCHÉ. <br>
