@@ -18,8 +18,7 @@ All keybinding assets come from itch.io free assets packs :
 
 ## Preview
 
-<img src="./data/screenshots/minestorm.gif"/> 
-<img src="./data/screenshots/screenshot0.png" style="width:260px;"/>
+<img src="./data/screenshots/minestorm.gif"/> <img src="./data/screenshots/screenshot0.png" style="width:260px;"/>
 <img src="./data/screenshots/screenshot4.png" style="width:260px;"/>
 <img src="./data/screenshots/screenshot1.png" style="width:260px;"/>
 <img src="./data/screenshots/screenshot2.png" style="width:260px;"/>
